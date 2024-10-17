@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+    background-image: url('bg.jpeg'); /* Replace with your background image path */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    filter: brightness(0.8); /* Slightly darken the background */
+    margin: 0; /* Remove default margin */
+    padding-right: 50px; /* Add some space from the right edge */
+}
+
+.circle-button {
+    border: none; /* Remove border */
+    background: none; /* Remove background */
+    cursor: pointer;
+    font-size: 80px; /* Larger text size for visibility */
+    color: rgba(255, 255, 255, 0.7); /* Initial text color with some transparency */
+    font-weight: bold;
+    outline: none; /* Remove outline */
+    transition: color 0.3s; /* Smooth color transition */
+    writing-mode: vertical-rl; /* Make text vertical */
+}
+
+.circle-button:hover {
+    color: rgba(255, 255, 255, 1); /* Full color on hover */
+}
+
+.heartbeat {
+    animation: heartbeat 0.6s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Scale up for heartbeat effect */
+    }
+}
